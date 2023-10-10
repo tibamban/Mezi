@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+	</head>
+
+	<body>
+		<canvas id="myCanvas" width="500" height="600"></canvas>
+		<br />
+		<label
+			><input
+				type="radio"
+				name="radio_mode"
+				onclick="setMode(MODE_DRAW);"
+				checked
+			/>Dessiner</label
+		>
+		<label
+			><input
+				type="radio"
+				name="radio_mode"
+				onclick="setMode(MODE_SELECT);"
+			/>Sélecteur de Rectangle</label
+		>
+		<label
+			><input
+				type="radio"
+				name="radio_mode"
+				onclick="setMode(MODE_MOVE);"
+			/>Déplacement de sélection</label
+		>
+		<label
+			><input
+				type="radio"
+				name="radio_mode"
+				onclick="setMode(MODE_ERASE);"
+			/>Effacer</label
+		>
+		<button onclick="clearButtonHandler()">Effacer tout</button>
+
+		<br />
+		<label>
+			<input type="color" id="colorPicker" onchange="setColor(this.value)" />
+			Choisir couleur</label
+		>
+
+		<br />
+
+		<script language="JavaScript" src="script.js"></script>
+	</body>
+</html>
